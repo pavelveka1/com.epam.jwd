@@ -1,5 +1,15 @@
 package com.epam.jwd.simple_tasks;
+/*
+ * Напишите программу, которая для введенной последовательности целых ненулевых чисел 
+ * (признак окончания ввода - ввод 0, количество чисел не меньше 2) определяет:
 
+является ли последовательность возрастающей;
+есть ли в ней хотя бы одна пара одинаковых соседних чисел;
+является ли последовательность знакочередующейся 
+(3, -2, 4, -5, 0 - да; 5, -4, -7, 8, 0 - нет); 
+Для ввода значений с клавиатуры можно воспользваться классом Scanner.
+*Примечание: массив или коллекцию для решения этой задачи использовать нельзя.
+ */
 import java.util.Scanner;
 
 public class Task10 {
@@ -14,7 +24,6 @@ public class Task10 {
 		int oldNumber = 0;
 		int newNumber = 0;
 	    int count = 0;
-		boolean numberOfEnterMoreOne = false;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter int number");
 		while (sc.hasNextInt() == true) {

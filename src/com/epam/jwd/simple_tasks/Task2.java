@@ -1,13 +1,9 @@
 package com.epam.jwd.simple_tasks;
-
+//Вычислите число и месяц в невисокосном году по номеру дня
 public class Task2 {
+	
 	private static int[] numberDaysInManths = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-
-	public static void main(String[] args) {
-
-		Task2.getDayAndManth(365);
-	}
-
+	
 	public static void getDayAndManth(int numberOfDay) {
 		if (numberOfDay > 365 || numberOfDay < 1) {
 			System.out.println("Day number must be in the range 1-365");

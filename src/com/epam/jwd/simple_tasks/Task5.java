@@ -10,23 +10,13 @@ package com.epam.jwd.simple_tasks;
 Примечание: для решения этой нельзя использовать перевод числа в строку и обратно.
  */
 public class Task5 {
-	
-	private int units = 0;
-	private int dozens = 0;
-	private int hundreds = 0;
-	private int[] arrayOfDigits = new int[3];
 
-	public static void main(String[] args) {
-		Task5 test=new Task5();
-		System.out.println(test.summarizeDigits(137));
-		System.out.println(test.multiplyDigits(137));
-		System.out.println(test.swapDozensAndHundreds(137));
-		System.out.println(test.convertToFourDigits(137));
-		
+	private static int units = 0;
+	private static int dozens = 0;
+	private static int hundreds = 0;
+	private static int[] arrayOfDigits = new int[3];
 
-	}
-
-	private int[] digits(int x) {
+	private static int[] digits(int x) {
 		units = x % 10;
 		x = x / 10;
 		dozens = x % 10;
@@ -34,25 +24,25 @@ public class Task5 {
 		return new int[] { units, dozens, hundreds };
 	}
 
-	public int summarizeDigits(int x) {
+	public static int summarizeDigits(int x) {
 		if (x < 1000) {
-			arrayOfDigits = this.digits(x);
+			arrayOfDigits = Task5.digits(x);
 			return arrayOfDigits[0] + arrayOfDigits[1] + arrayOfDigits[2];
 		}
 		return -1;
 	}
 
-	public int multiplyDigits(int x) {
+	public static int multiplyDigits(int x) {
 		if (x < 1000) {
-			arrayOfDigits = this.digits(x);
+			arrayOfDigits = Task5.digits(x);
 			return arrayOfDigits[0] * arrayOfDigits[1] * arrayOfDigits[2];
 		}
 		return -1;
 	}
 
-	public int swapDozensAndHundreds(int x) {
+	public static int swapDozensAndHundreds(int x) {
 		if (x < 1000) {
-			arrayOfDigits = this.digits(x);
+			arrayOfDigits = Task5.digits(x);
 			dozens = arrayOfDigits[2];
 			hundreds = arrayOfDigits[1];
 			return arrayOfDigits[0] + dozens * 10 + hundreds * 100;
@@ -60,12 +50,12 @@ public class Task5 {
 		return -1;
 	}
 
-	public int convertToFourDigits(int x) {
+	public static int convertToFourDigits(int x) {
 		if (x < 1000) {
-		   arrayOfDigits=this.digits(x);
-		   int thousand=arrayOfDigits[0]*1000;
-		   return thousand+x;
-	    }
+			arrayOfDigits = Task5.digits(x);
+			int thousand = arrayOfDigits[0] * 1000;
+			return thousand + x;
+		}
 		return -1;
 	}
 

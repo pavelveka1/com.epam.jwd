@@ -2,11 +2,7 @@ package com.epam.jwd.simple_tasks;
 //Вычислить значение функции
 public class Task4 {
 
-	public static void main(String[] args) {
-
-		System.out.println(Task4.calculateFunctions(13));
-	}
-	public static double calculateFunctions(double x) {
+	public static double calculateFunction(double x) {
 		double result=0;
 		if(x<=13) {
 			result=-Math.pow(x, 3)+9;

@@ -3,11 +3,7 @@ package com.epam.jwd.simple_tasks;
 //Даны действительные числа а,b,с. Удвоить эти числа, если а > b > с, 
 //и заменить их абсолютными значениями, если это не так.
 public class Task3 {
-	public static void main(String[] args) {
-
-		Task3.convertNumbers(10, -5, 4);
-	}
-
+	
 	public static void convertNumbers(double a, double b, double c) {
 		if(a>b && b>c) {
 			a=a*2;
