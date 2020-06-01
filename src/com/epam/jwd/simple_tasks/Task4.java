@@ -1,5 +1,5 @@
 package com.epam.jwd.simple_tasks;
-//Вычислить значение функции
+//Р’С‹С‡РёСЃР»РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРё:
 public class Task4 {
 
 	public static double calculateFunction(double x) {
