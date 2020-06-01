@@ -49,6 +49,8 @@ public class Task10 {
 			oldNumber = newNumber;
 
 		}
+		System.out.println("You entered an invalid value");
+		sc.close();
 	}
 	
 	private static boolean checkSequenceForIncreasing(int firstNumber, int secondNumber) {
