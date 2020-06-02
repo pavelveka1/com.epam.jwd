@@ -9,6 +9,6 @@ public class Task4 {
 		}else {
 			result=-3/(x+1);
 		}
-		return ((double)((int)(result*1000)))/1000;
+		return result;
 	}
 }

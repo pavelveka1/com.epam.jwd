@@ -6,8 +6,10 @@ package com.epam.jwd.simple_tasks;
  */
 public class Task1 {
 
-
 	public static double calculate(double a, double b, double c) {
+		if (a == 0 || b == 0) {
+			throw new ArithmeticException("division by zero");
+		}
 		double result = 0;
 		// вычислим некоторые части выражения и присвоим их переменным x, y, z
 		double x = Math.sqrt(Math.pow(b, 2) + 4 * a * c);
