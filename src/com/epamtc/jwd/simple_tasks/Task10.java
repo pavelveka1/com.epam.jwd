@@ -1,4 +1,4 @@
-package com.epam.jwd.simple_tasks;
+package com.epamtc.jwd.simple_tasks;
 
 import java.util.InputMismatchException;
 /*

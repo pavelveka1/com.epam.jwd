@@ -1,4 +1,4 @@
-package com.epam.jwd.simple_tasks;
+package com.epamtc.jwd.simple_tasks;
 
 /**
  * Вычислить значение выражения по формуле : ((𝑏 + √(𝑏^2 + 4𝑎𝑐)) / 2𝑎) −

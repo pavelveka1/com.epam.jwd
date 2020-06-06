@@ -1,4 +1,4 @@
-package com.epam.jwd.simple_tasks;
+package com.epamtc.jwd.simple_tasks;
 /*
 Даны действительные числа а,b,с. Удвоить эти числа, если а > b > с,
  и заменить их абсолютными значениями, если это не так.

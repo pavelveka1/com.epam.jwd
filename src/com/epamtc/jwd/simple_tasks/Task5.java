@@ -1,4 +1,4 @@
-package com.epam.jwd.simple_tasks;
+package com.epamtc.jwd.simple_tasks;
 
 /*
 Дано трехзначное число. Определите:
@@ -16,7 +16,7 @@ public class Task5 {
 	private static int hundreds = 0;
 	private static int[] arrayOfDigits = new int[3];
 
-	private static int[] digits(int x) {
+	private static int[] getArrayOfDigits(int x) {
 		units = x % 10;
 		x = x / 10;
 		dozens = x % 10;
@@ -26,7 +26,7 @@ public class Task5 {
 
 	public static int summarizeDigits(int x) {
 		if (x < 1000) {
-			arrayOfDigits = Task5.digits(x);
+			arrayOfDigits = Task5.getArrayOfDigits(x);
 			return arrayOfDigits[0] + arrayOfDigits[1] + arrayOfDigits[2];
 		}
 		return -1;
@@ -34,7 +34,7 @@ public class Task5 {
 
 	public static int multiplyDigits(int x) {
 		if (x < 1000) {
-			arrayOfDigits = Task5.digits(x);
+			arrayOfDigits = Task5.getArrayOfDigits(x);
 			return arrayOfDigits[0] * arrayOfDigits[1] * arrayOfDigits[2];
 		}
 		return -1;
@@ -42,7 +42,7 @@ public class Task5 {
 
 	public static int swapDozensAndHundreds(int x) {
 		if (x < 1000) {
-			arrayOfDigits = Task5.digits(x);
+			arrayOfDigits = Task5.getArrayOfDigits(x);
 			dozens = arrayOfDigits[2];
 			hundreds = arrayOfDigits[1];
 			return arrayOfDigits[0] + dozens * 10 + hundreds * 100;
@@ -52,7 +52,7 @@ public class Task5 {
 
 	public static int convertToFourDigits(int x) {
 		if (x < 1000) {
-			arrayOfDigits = Task5.digits(x);
+			arrayOfDigits = Task5.getArrayOfDigits(x);
 			int thousand = arrayOfDigits[0] * 1000;
 			return thousand + x;
 		}

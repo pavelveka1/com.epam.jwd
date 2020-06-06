@@ -1,12 +1,7 @@
-package com.epam.jwd.simple_tasks;
+package com.epamtc.jwd.simple_tasks;
 
 public class Task8 {
 
-	public static void main(String[] args) {
-
-		Task8.calculateFunction(5, 20, 3, 2);
-	}
-	
 	public static void calculateFunction(int start, int end, int step, int constant ) {
 		int y=0;
 		for(int x=start; x<=end; x=x+step) {
