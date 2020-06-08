@@ -3,21 +3,44 @@ package com.epam.jwd.simple_tasks;
 //Вычислите число и месяц в невисокосном году по номеру дня.
 public class Task2 {
 
-	private static int[] numberDaysInManths = new int[] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-
-	public static void getDayAndManth(int numberOfDay) {
-		if (numberOfDay > 365 || numberOfDay < 1) {
-			System.out.println("Day number must be in the range 1-365");
+	public static String getDayAndManth(int numberOfDayInYear) {
+		int day = 0;
+		int manth = 1;
+		if (numberOfDayInYear > 365 || numberOfDayInYear < 1) {
+			return "Day number must be in the range 1-365";
 		} else {
-			for (int i = 1; i <= 12; i++) {
-				if (numberOfDay <= numberDaysInManths[i - 1]) {
-					System.out.println("Day = " + numberOfDay + ", Manth = " + i);
-					return;
-				} else {
-					numberOfDay = numberOfDay - numberDaysInManths[i - 1];
+			for (; manth <= 12; manth++) {
+				switch (manth) {
+				case 1, 3, 5, 7, 8, 10, 12:
+					if (numberOfDayInYear <= 31) {
+						day = numberOfDayInYear;
+						return "Day = " + day + ", Manth = " + manth;
+					} else {
+						numberOfDayInYear = numberOfDayInYear - 31;
+					}
+					break;
+
+				case 2:
+					if (numberOfDayInYear <= 28) {
+						day = numberOfDayInYear;
+						return "Day = " + day + ", Manth = " + manth;
+					} else {
+						numberOfDayInYear = numberOfDayInYear - 28;
+					}
+					break;
+
+				case 4, 6, 9, 11:
+
+					if (numberOfDayInYear <= 30) {
+						day = numberOfDayInYear;
+						return "Day = " + day + ", Manth = " + manth;
+					} else {
+						numberOfDayInYear = numberOfDayInYear - 30;
+					}
+					break;
 				}
 			}
-
 		}
+		return "Day = " + day + ", Manth = " + manth;
 	}
 }

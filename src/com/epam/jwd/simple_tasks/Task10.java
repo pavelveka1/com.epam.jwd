@@ -19,7 +19,7 @@ public class Task10 {
 	private static boolean pairOfSameNumbers = false;
 	private static boolean signChangeSequence = false;
 	private static boolean alwaysChangeSign = true;
-	private static boolean isZero = true;
+	private static boolean enteredNumberZero = true;
 
 	public static void main(String[] args) {
 
@@ -41,13 +41,13 @@ public class Task10 {
 										+ pairOfSameNumbers + "," + " every number change sign: " + signChangeSequence);
 						return;
 					} else {
-						while (isZero) {
+						while (enteredNumberZero) {
 							System.out.println("You entered less then 2 numbers");
 							System.out.println("Enter next number: ");
 							if (sc.hasNextInt() == true)
 								newNumber = sc.nextInt();
 							if (newNumber != 0) {
-								isZero = false;
+								enteredNumberZero = false;
 							}
 						}
 					}
