@@ -1,4 +1,4 @@
-package com.epamtc.jwd.simple_tasks;
+package com.epam.jwd.simple_tasks;
 
 public class Task8 {
 

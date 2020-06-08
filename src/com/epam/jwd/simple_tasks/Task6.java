@@ -1,4 +1,4 @@
-package com.epamtc.jwd.simple_tasks;
+package com.epam.jwd.simple_tasks;
 
 /*
 Сумма первых n членов арифметической прогрессии вычисляется по формуле Sn = ( a1 + an )* n / 2.
@@ -6,28 +6,32 @@ package com.epamtc.jwd.simple_tasks;
  Найдите n, при котором значение Sn выходит за диапазон типов int и long (экспериментальным путем).
  */
 public class Task6 {
+	
+	public static void main(String[] args) {
+		System.out.println(Task6.calculateIterationOutOfRangeInteger(Integer.MAX_VALUE, Integer.MAX_VALUE));
+	}
 
 	public static int calculateIterationOutOfRangeInteger(int a1, int step) {
 		int sum = 0;
-		int numberMemberSequence = 1;
+		int numberIteration = 1;
 		int nextValue = 0;
 
 		while (true) {
-			nextValue = a1 + step * (numberMemberSequence - 1);
+			nextValue = a1 + step * (numberIteration - 1);
 
 			if (nextValue < 0) {
 				if ((Integer.MIN_VALUE + Math.abs(sum)) < nextValue) {
-					sum = (a1 + a1 + step * (numberMemberSequence - 1)) * (numberMemberSequence / 2);
-					numberMemberSequence++;
+					sum = (a1 + a1 + step * (numberIteration - 1)) * (numberIteration / 2);
+					numberIteration++;
 				} else {
-					return ++numberMemberSequence;
+					return ++numberIteration;
 				}
 			} else {
-				if ((Integer.MAX_VALUE - Math.abs(sum)) >= nextValue) {
-					sum = (a1 + a1 + step * (numberMemberSequence - 1)) * (numberMemberSequence / 2);
-					numberMemberSequence++;
+				if ((Integer.MAX_VALUE - Math.abs(sum)) > nextValue) {
+					sum = (a1 + a1 + step * (numberIteration - 1)) * (numberIteration / 2);
+					numberIteration++;
 				} else {
-					return ++numberMemberSequence;
+					return ++numberIteration;
 				}
 			}
 		}
@@ -50,7 +54,7 @@ public class Task6 {
 					return ++numberMemberSequence;
 				}
 			} else {
-				if ((Long.MAX_VALUE - Math.abs(sum)) >= nextValue) {
+				if ((Long.MAX_VALUE - Math.abs(sum)) > nextValue) {
 					sum = (a1 + a1 + step * (numberMemberSequence - 1)) * (numberMemberSequence / 2);
 					numberMemberSequence++;
 				} else {

@@ -1,4 +1,4 @@
-package com.epamtc.jwd.simple_tasks;
+package com.epam.jwd.simple_tasks;
 
 /*
  Вычислить: (1+2) * (1+2+3) * ... * (1+2+...+10).

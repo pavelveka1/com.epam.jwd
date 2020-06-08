@@ -1,4 +1,4 @@
-package com.epamtc.jwd.simple_tasks;
+package com.epam.jwd.simple_tasks;
 
 import java.util.InputMismatchException;
 /*
@@ -19,6 +19,7 @@ public class Task10 {
 	private static boolean pairOfSameNumbers = false;
 	private static boolean signChangeSequence = false;
 	private static boolean alwaysChangeSign = true;
+	private static boolean isZero = true;
 
 	public static void main(String[] args) {
 
@@ -40,11 +41,17 @@ public class Task10 {
 										+ pairOfSameNumbers + "," + " every number change sign: " + signChangeSequence);
 						return;
 					} else {
-						System.out.println("You entered less then 2 numbers");
-						System.out.println("Enter next number: ");
-						if (sc.hasNextInt() == true)
-							newNumber = sc.nextInt();
+						while (isZero) {
+							System.out.println("You entered less then 2 numbers");
+							System.out.println("Enter next number: ");
+							if (sc.hasNextInt() == true)
+								newNumber = sc.nextInt();
+							if (newNumber != 0) {
+								isZero = false;
+							}
+						}
 					}
+
 				}
 				if (++count > 1) {
 					increasingSequence = Task10.checkSequenceForIncreasing(oldNumber, newNumber);
@@ -56,7 +63,7 @@ public class Task10 {
 
 			}
 			System.out.println("You entered an invalid value");
-		}  finally {
+		} finally {
 			if (sc != null) {
 				sc.close();
 			}

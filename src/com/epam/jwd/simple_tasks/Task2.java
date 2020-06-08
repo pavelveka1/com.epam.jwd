@@ -1,4 +1,4 @@
-package com.epamtc.jwd.simple_tasks;
+package com.epam.jwd.simple_tasks;
 
 //Вычислите число и месяц в невисокосном году по номеру дня.
 public class Task2 {

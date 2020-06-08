@@ -1,4 +1,4 @@
-package com.epamtc.jwd.simple_tasks;
+package com.epam.jwd.simple_tasks;
 
 /*
 Дано действительное число R вида nnn.ddd (три цифровых разряда в дробной и целой частях).
