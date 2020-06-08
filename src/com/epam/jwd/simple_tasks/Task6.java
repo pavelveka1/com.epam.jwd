@@ -7,10 +7,6 @@ package com.epam.jwd.simple_tasks;
  */
 public class Task6 {
 	
-	public static void main(String[] args) {
-		System.out.println(Task6.calculateIterationOutOfRangeInteger(Integer.MAX_VALUE, Integer.MAX_VALUE));
-	}
-
 	public static int calculateIterationOutOfRangeInteger(int a1, int step) {
 		int sum = 0;
 		int numberIteration = 1;
