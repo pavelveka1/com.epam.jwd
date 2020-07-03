@@ -3,7 +3,7 @@ package com.epam.jwd.simple_tasks;
 //Вычислите число и месяц в невисокосном году по номеру дня.
 public class Task2 {
 
-	public static String getDayAndManth(int numberOfDayInYear) {
+	public static String toDayAndManth(int numberOfDayInYear) {
 		int day = 0;
 		int manth = 1;
 		if (numberOfDayInYear > 365 || numberOfDayInYear < 1) {
